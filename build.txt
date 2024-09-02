@@ -1,0 +1,3 @@
+displayName = Bosses Poison Aura
+author = First Fractal
+version = 0.1
