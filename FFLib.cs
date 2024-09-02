@@ -3,22 +3,37 @@ using Terraria.ID;
 using Terraria.Chat;
 using Terraria.Localization;
 using Microsoft.Xna.Framework;
+using System;
 using System.Linq;
 
 //this is my own libary that I use to store snipits. I don't want it to be it's own mod, so I'll use copy and paste this file when needed.
-namespace INSERT_NEW_NAMESPACE_HERE
+namespace BossesPoisonAura
 {
     public class ffVar
     {
-        //list of all the boss parts
-        public static int[] BossParts = { NPCID.EaterofWorldsHead, NPCID.EaterofWorldsBody, NPCID.EaterofWorldsTail, NPCID.Creeper,
-            NPCID.SkeletronHand, NPCID.WallofFleshEye, NPCID.TheDestroyer, NPCID.TheDestroyerBody, NPCID.TheDestroyerTail, NPCID.PrimeCannon, NPCID.PrimeLaser, NPCID.PrimeSaw, NPCID.PrimeVice, NPCID.PlanterasHook, NPCID.PlanterasTentacle,
-            NPCID.GolemFistLeft, NPCID.GolemFistRight, NPCID.GolemHead, NPCID.GolemHeadFree, NPCID.CultistBossClone, NPCID.MoonLordCore,
-            NPCID.MoonLordHand, NPCID.MoonLordHead, NPCID.MoonLordFreeEye, NPCID.MoonLordLeechBlob };
+        public class Bosses
+        {
+            //list of all the bosses
+            public static int[] Boss = { NPCID.KingSlime, NPCID.EyeofCthulhu, NPCID.EaterofWorldsHead, NPCID.BrainofCthulhu, NPCID.QueenBee, NPCID.SkeletronHead, NPCID.Deerclops, NPCID.WallofFlesh, NPCID.TheDestroyer, NPCID.SkeletronPrime, NPCID.Spazmatism, NPCID.Retinazer, NPCID.Plantera, NPCID.QueenSlimeBoss, NPCID.Golem, NPCID.DukeFishron, NPCID.HallowBoss, NPCID.CultistBoss, NPCID.MoonLordCore };
 
-        public static int[] MiniBosses = {NPCID.BloodNautilus, NPCID.DD2DarkMageT1, NPCID.DD2DarkMageT3, NPCID.DD2OgreT2, NPCID.DD2OgreT3, NPCID.DD2Betsy,
-            NPCID.PirateShip, NPCID.MourningWood, NPCID.Pumpking, NPCID.Everscream, NPCID.SantaNK1, NPCID.IceQueen, NPCID.MartianSaucer,
-            NPCID.LunarTowerSolar, NPCID.LunarTowerVortex, NPCID.LunarTowerNebula, NPCID.LunarTowerStardust};
+            //list of all the boss parts
+            public static int[] BossParts = { NPCID.EaterofWorldsHead, NPCID.EaterofWorldsBody, NPCID.EaterofWorldsTail,
+                NPCID.SkeletronHand, NPCID.WallofFleshEye, NPCID.TheDestroyer, NPCID.TheDestroyerBody, NPCID.TheDestroyerTail, NPCID.PrimeCannon, NPCID.PrimeLaser, NPCID.PrimeSaw, NPCID.PrimeVice, NPCID.PlanterasHook, NPCID.PlanterasTentacle,
+                NPCID.GolemFistLeft, NPCID.GolemFistRight, NPCID.GolemHead, NPCID.GolemHeadFree, NPCID.CultistBossClone, NPCID.MoonLordCore,
+                NPCID.MoonLordHand, NPCID.MoonLordHead, NPCID.MoonLordFreeEye, NPCID.MoonLordLeechBlob };
+
+            //list of all the boss minions
+            public static int[] BossMinions = { NPCID.SlimeSpiked, NPCID.ServantofCthulhu, NPCID.VileSpitEaterOfWorlds, NPCID.Creeper, NPCID.Bee, NPCID.TheHungry, NPCID.TheHungryII, NPCID.LeechHead, NPCID.LeechBody, NPCID.LeechTail, NPCID.QueenSlimeMinionBlue, NPCID.QueenSlimeMinionPink, NPCID.QueenSlimeMinionPurple, NPCID.Probe, NPCID.Spore, NPCID.Sharkron, NPCID.Sharkron2, NPCID.CultistDragonHead, NPCID.CultistDragonBody2, NPCID.CultistDragonBody3, NPCID.CultistDragonBody4, NPCID.CultistDragonTail, NPCID.AncientCultistSquidhead };
+
+            //list of all the boss minions
+            public static int[] BossProjectiles = { ProjectileID.QueenBeeStinger, ProjectileID.Skull, ProjectileID.DeerclopsIceSpike, ProjectileID.DeerclopsRangedProjectile, ProjectileID.InsanityShadowHostile, ProjectileID.EyeLaser, ProjectileID.QueenSlimeSmash, ProjectileID.QueenSlimeGelAttack, ProjectileID.DeathLaser, ProjectileID.EyeFire, ProjectileID.BombSkeletronPrime, ProjectileID.SeedPlantera, ProjectileID.PoisonSeedPlantera, ProjectileID.ThornBall, ProjectileID.Fireball, ProjectileID.EyeBeam, ProjectileID.Sharknado, ProjectileID.SharknadoBolt, ProjectileID.Cthulunado, ProjectileID.HallowBossDeathAurora, ProjectileID.FairyQueenSunDance, ProjectileID.HallowBossLastingRainbow, ProjectileID.HallowBossRainbowStreak, ProjectileID.HallowBossSplitShotCore, ProjectileID.FairyQueenLance, ProjectileID.FairyQueenHymn, ProjectileID.CultistBossFireBall, ProjectileID.CultistBossFireBallClone, ProjectileID.CultistBossIceMist, ProjectileID.CultistBossLightningOrb, ProjectileID.CultistBossLightningOrbArc, ProjectileID.PhantasmalEye, ProjectileID.PhantasmalSphere, ProjectileID.PhantasmalDeathray, ProjectileID.MoonLeech, ProjectileID.PhantasmalBolt, ProjectileID.MoonBoulder };
+
+            //list of all the mini bosses
+            public static int[] MiniBosses = {NPCID.BloodNautilus, NPCID.DD2DarkMageT1, NPCID.DD2DarkMageT3, NPCID.DD2OgreT2, NPCID.DD2OgreT3, NPCID.DD2Betsy,
+                NPCID.PirateShip, NPCID.MourningWood, NPCID.Pumpking, NPCID.Everscream, NPCID.SantaNK1, NPCID.IceQueen, NPCID.MartianSaucer,
+                NPCID.LunarTowerSolar, NPCID.LunarTowerVortex, NPCID.LunarTowerNebula, NPCID.LunarTowerStardust};
+        }
+
 
         public class Slimes
         {
@@ -97,7 +112,7 @@ namespace INSERT_NEW_NAMESPACE_HERE
                 NPCID.HornetLeafy, NPCID.BigHornetLeafy, NPCID.LittleHornetLeafy, NPCID.HornetSpikey, NPCID.LittleHornetSpikey,
                 NPCID.BigHornetSpikey, NPCID.BigHornetStingy, NPCID.LittleHornetStingy, NPCID.HornetStingy};
 
-            public static int[] mossHornets = { NPCID.MossHornet, NPCID.TinyMossHornet, NPCID.LittleMossHornet, 
+            public static int[] mossHornets = { NPCID.MossHornet, NPCID.TinyMossHornet, NPCID.LittleMossHornet,
                 NPCID.BigMossHornet, NPCID.GiantMossHornet };
         }
 
@@ -189,9 +204,9 @@ namespace INSERT_NEW_NAMESPACE_HERE
             public static int[] hardmode = { NPCID.GoblinSummoner, NPCID.ShadowFlameApparition };
         }
 
-        public class OOA 
-        { 
-            public static int[] Tier1 = {NPCID.DD2GoblinT1, NPCID.DD2GoblinBomberT1, NPCID.DD2JavelinstT1, NPCID.DD2WyvernT1, NPCID.DD2SkeletonT1};
+        public class OOA
+        {
+            public static int[] Tier1 = { NPCID.DD2GoblinT1, NPCID.DD2GoblinBomberT1, NPCID.DD2JavelinstT1, NPCID.DD2WyvernT1, NPCID.DD2SkeletonT1 };
             public static int[] Tier2 = { NPCID.DD2GoblinT2, NPCID.DD2GoblinBomberT2, NPCID.DD2JavelinstT2, NPCID.DD2WyvernT2, NPCID.DD2KoboldWalkerT2,
                 NPCID.DD2KoboldWalkerT2, NPCID.DD2DrakinT2, NPCID.DD2WitherBeastT2};
             public static int[] Tier3 = { NPCID.DD2GoblinT3, NPCID.DD2GoblinBomberT3, NPCID.DD2JavelinstT3, NPCID.DD2WyvernT3, NPCID.DD2KoboldWalkerT3,
@@ -221,7 +236,7 @@ namespace INSERT_NEW_NAMESPACE_HERE
         public class PumpkinMoon
         {
             public static int[] normalEnemies = { NPCID.Scarecrow1, NPCID.Scarecrow2, NPCID.Scarecrow3, NPCID.Scarecrow4, NPCID.Scarecrow5,
-                NPCID.Scarecrow6, NPCID.Scarecrow7, NPCID.Scarecrow8, NPCID.Scarecrow9, NPCID.Scarecrow10,  NPCID.Splinterling, NPCID.Poltergeist, 
+                NPCID.Scarecrow6, NPCID.Scarecrow7, NPCID.Scarecrow8, NPCID.Scarecrow9, NPCID.Scarecrow10,  NPCID.Splinterling, NPCID.Poltergeist,
                 NPCID.HeadlessHorseman};
 
             public static int[] miniBoss = { NPCID.MourningWood, NPCID.Pumpking };
@@ -235,7 +250,7 @@ namespace INSERT_NEW_NAMESPACE_HERE
             public static int[] miniBoss = { NPCID.Everscream, NPCID.SantaNK1, NPCID.IceQueen };
         }
 
-        public class  MartianMadness
+        public class MartianMadness
         {
             public static int[] normalEnemies = {NPCID.Scutlix, NPCID.ScutlixRider, NPCID.MartianDrone, NPCID.MartianOfficer, NPCID.MartianWalker,
                 NPCID.MartianTurret, NPCID.MartianDrone, NPCID.MartianEngineer, NPCID.RayGunner, NPCID.GrayGrunt, NPCID.BrainScrambler};
@@ -245,28 +260,28 @@ namespace INSERT_NEW_NAMESPACE_HERE
 
         public class LunarEvents
         {
-            public static int[] solarEnemies = { NPCID.SolarCorite, NPCID.SolarCrawltipedeHead, NPCID.SolarDrakomire, 
+            public static int[] solarEnemies = { NPCID.SolarCorite, NPCID.SolarCrawltipedeHead, NPCID.SolarDrakomire,
                 NPCID.SolarDrakomireRider, NPCID.SolarSroller, NPCID.SolarSpearman, NPCID.SolarSolenian};
 
-            public static int[] vortexEnemies = { NPCID.VortexHornet, NPCID.VortexHornetQueen, NPCID.VortexLarva, 
+            public static int[] vortexEnemies = { NPCID.VortexHornet, NPCID.VortexHornetQueen, NPCID.VortexLarva,
                 NPCID.VortexRifleman, NPCID.VortexSoldier };
 
-            public static int[] nebulaEnemies = { NPCID.NebulaBeast, NPCID.NebulaBrain, NPCID.NebulaHeadcrab, 
+            public static int[] nebulaEnemies = { NPCID.NebulaBeast, NPCID.NebulaBrain, NPCID.NebulaHeadcrab,
                 NPCID.NebulaSoldier };
 
-            public static int[] stardustEnemies = { NPCID.StardustCellBig, NPCID.StardustCellSmall, NPCID.StardustJellyfishBig, 
-                NPCID.StardustJellyfishSmall, NPCID.StardustSoldier, NPCID.StardustSpiderBig, NPCID.StardustSpiderSmall, 
+            public static int[] stardustEnemies = { NPCID.StardustCellBig, NPCID.StardustCellSmall, NPCID.StardustJellyfishBig,
+                NPCID.StardustJellyfishSmall, NPCID.StardustSoldier, NPCID.StardustSpiderBig, NPCID.StardustSpiderSmall,
                 NPCID.StardustWormHead};
 
-            public static int[] pillars = { NPCID.LunarTowerSolar, NPCID.LunarTowerVortex, NPCID.LunarTowerNebula, 
+            public static int[] pillars = { NPCID.LunarTowerSolar, NPCID.LunarTowerVortex, NPCID.LunarTowerNebula,
                 NPCID.LunarTowerStardust };
         }
 
         public class Forest
         {
             public static int[] dayTime = { NPCID.GreenSlime, NPCID.BlueSlime, NPCID.PurpleSlime, NPCID.Pinky, NPCID.GoblinScout };
-            public static int[] nightTime = { NPCID.Zombie, NPCID.Raven, NPCID.DemonEye, NPCID.DemonEye2, NPCID.CataractEye, 
-                NPCID.CataractEye2, NPCID.SleepyEye, NPCID.SleepyEye2, NPCID.DialatedEye, NPCID.DialatedEye2, NPCID.GreenEye, 
+            public static int[] nightTime = { NPCID.Zombie, NPCID.Raven, NPCID.DemonEye, NPCID.DemonEye2, NPCID.CataractEye,
+                NPCID.CataractEye2, NPCID.SleepyEye, NPCID.SleepyEye2, NPCID.DialatedEye, NPCID.DialatedEye2, NPCID.GreenEye,
                 NPCID.GreenEye2, NPCID.PurpleEye, NPCID.PurpleEye2 };
             public static int[] nightTimeHardmode = { NPCID.PossessedArmor, NPCID.WanderingEye, NPCID.Wraith, NPCID.Werewolf };
         }
@@ -275,14 +290,14 @@ namespace INSERT_NEW_NAMESPACE_HERE
         {
             public static int[] dayTime = { NPCID.IceSlime };
             public static int[] nightTime = { NPCID.ZombieEskimo, NPCID.CorruptPenguin, NPCID.CrimsonPenguin };
-            public static int[] hardmode = { NPCID.IceElemental, NPCID.Wolf, NPCID.IceGolem};
+            public static int[] hardmode = { NPCID.IceElemental, NPCID.Wolf, NPCID.IceGolem };
 
             public static int[] boss = { NPCID.Deerclops, };
         }
 
         public class Desert
         {
-            public static int[] preHardmode = { NPCID.Vulture, NPCID.Antlion, NPCID.Tumbleweed};
+            public static int[] preHardmode = { NPCID.Vulture, NPCID.Antlion, NPCID.Tumbleweed };
             public static int[] hardmode = { NPCID.Mummy, NPCID.LightMummy, NPCID.DarkMummy, NPCID.BloodMummy, NPCID.SandElemental,
                 NPCID.SandShark, NPCID.SandsharkCorrupt, NPCID.SandsharkCrimson, NPCID.SandsharkHallow};
         }
@@ -292,7 +307,7 @@ namespace INSERT_NEW_NAMESPACE_HERE
             public static int[] preHardmode = { NPCID.EaterofSouls, NPCID.CorruptGoldfish, NPCID.DevourerHead };
             public static int[] hardmode = { NPCID.Corruptor, NPCID.CorruptSlime, NPCID.DarkMummy, NPCID.Slimeling,
                 NPCID.Slimer, NPCID.Slimer2, NPCID.SeekerHead, NPCID.CursedHammer, NPCID.Clinger, NPCID.Corruptor,
-                NPCID.CorruptSlime, NPCID.BigMimicCorruption, NPCID.DesertGhoulCorruption, NPCID.PigronCorruption, 
+                NPCID.CorruptSlime, NPCID.BigMimicCorruption, NPCID.DesertGhoulCorruption, NPCID.PigronCorruption,
                 NPCID.SandsharkCorrupt};
 
             public static int[] boss = { NPCID.EaterofWorldsHead };
@@ -300,10 +315,10 @@ namespace INSERT_NEW_NAMESPACE_HERE
 
         public class Crimson
         {
-            public static int[] preHardmode = { NPCID.BloodCrawler, NPCID.BloodCrawlerWall, NPCID.CrimsonGoldfish, 
+            public static int[] preHardmode = { NPCID.BloodCrawler, NPCID.BloodCrawlerWall, NPCID.CrimsonGoldfish,
                 NPCID.FaceMonster, NPCID.BigCrimera, NPCID.Crimera, NPCID.LittleCrimera};
             public static int[] hardmode = { NPCID.Herpling, NPCID.Crimslime, NPCID.BloodMummy, NPCID.BloodJelly,
-                NPCID.BloodFeeder, NPCID.CrimsonAxe, NPCID.IchorSticker, NPCID.FloatyGross, NPCID.BigMimicCrimson, 
+                NPCID.BloodFeeder, NPCID.CrimsonAxe, NPCID.IchorSticker, NPCID.FloatyGross, NPCID.BigMimicCrimson,
                 NPCID.DesertGhoulCrimson, NPCID.PigronCrimson, NPCID.SandsharkCrimson};
 
             public static int[] boss = { NPCID.BrainofCthulhu };
@@ -329,7 +344,7 @@ namespace INSERT_NEW_NAMESPACE_HERE
 
         public class GlowingMushroom
         {
-            public static int[] preHardmode = { NPCID.SporeBat, NPCID.SporeSkeleton};
+            public static int[] preHardmode = { NPCID.SporeBat, NPCID.SporeSkeleton };
             public static int[] hardmode = { NPCID.AnomuraFungus, NPCID.FungiBulb, NPCID.MushiLadybug, NPCID.ZombieMushroom,
                 NPCID.ZombieMushroomHat, NPCID.FungoFish, NPCID.GiantFungiBulb};
         }
@@ -346,8 +361,8 @@ namespace INSERT_NEW_NAMESPACE_HERE
         {
             public static int[] preHardmode = { NPCID.Antlion, NPCID.WalkingAntlion, NPCID.LarvaeAntlion, NPCID.GiantWalkingAntlion,
                 NPCID.FlyingAntlion, NPCID.GiantFlyingAntlion, NPCID.SandSlime,  NPCID.TombCrawlerHead};
-            public static int[] hardmode = { NPCID.DesertBeast, NPCID.DesertScorpionWalk, NPCID.DesertScorpionWall, 
-                NPCID.DesertLamiaLight, NPCID.DesertLamiaDark, NPCID.DuneSplicerHead, NPCID.DesertGhoul, 
+            public static int[] hardmode = { NPCID.DesertBeast, NPCID.DesertScorpionWalk, NPCID.DesertScorpionWall,
+                NPCID.DesertLamiaLight, NPCID.DesertLamiaDark, NPCID.DuneSplicerHead, NPCID.DesertGhoul,
                 NPCID.DesertGhoulCorruption, NPCID.DesertGhoulCrimson, NPCID.DesertGhoulHallow, NPCID.DesertDjinn};
         }
 
@@ -369,21 +384,20 @@ namespace INSERT_NEW_NAMESPACE_HERE
         {
             public static int[] preHardmode = { NPCID.Hellbat, NPCID.LavaSlime, NPCID.FireImp, NPCID.Demon, NPCID.VoodooDemon,
                 NPCID.BoneSerpentHead};
-            public static int[] hardmode = { NPCID.Mimic, NPCID.DemonTaxCollector, NPCID.Lavabat, NPCID.RedDevil};
+            public static int[] hardmode = { NPCID.Mimic, NPCID.DemonTaxCollector, NPCID.Lavabat, NPCID.RedDevil };
 
             public static int[] boss = { NPCID.WallofFlesh };
         }
 
         public class Hallow
         {
-            public static int[] dayTime = { NPCID.Pixie, NPCID.Unicorn, NPCID.RainbowSlime, NPCID.LightMummy, 
+            public static int[] dayTime = { NPCID.Pixie, NPCID.Unicorn, NPCID.RainbowSlime, NPCID.LightMummy,
                 NPCID.SandsharkHallow };
             public static int[] nightTime = { NPCID.Gastropod };
-            public static int[] bosses = { NPCID.QueenSlimeBoss, NPCID.HallowBoss};
-            public static int[] underground = { NPCID.IlluminantBat, NPCID.IlluminantSlime, NPCID.ChaosElemental, 
+            public static int[] bosses = { NPCID.QueenSlimeBoss, NPCID.HallowBoss };
+            public static int[] underground = { NPCID.IlluminantBat, NPCID.IlluminantSlime, NPCID.ChaosElemental,
                 NPCID.EnchantedSword, NPCID.BigMimicHallow, NPCID.DesertGhoulHallow, NPCID.PigronHallow};
         }
-
 
         public class MiniBiomes
         {
@@ -405,7 +419,7 @@ namespace INSERT_NEW_NAMESPACE_HERE
 
         public class Graveyard
         {
-            public static int[] preHardmode = { NPCID.MaggotZombie, NPCID.Zombie, NPCID.SmallZombie, NPCID.BigZombie, 
+            public static int[] preHardmode = { NPCID.MaggotZombie, NPCID.Zombie, NPCID.SmallZombie, NPCID.BigZombie,
                 NPCID.ArmedZombie, NPCID.BaldZombie, NPCID.SmallBaldZombie, NPCID.BigBaldZombie,
                 NPCID.PincushionZombie, NPCID.SmallPincushionZombie, NPCID.BigPincushionZombie, NPCID.ArmedZombiePincussion,
                 NPCID.SlimedZombie, NPCID.SmallSlimedZombie, NPCID.BigSlimedZombie, NPCID.ArmedZombieSlimed,
@@ -431,7 +445,7 @@ namespace INSERT_NEW_NAMESPACE_HERE
     public class ffFunc
     {
         //function for saying something in the chat
-        public static void Talk(string message, Color color)
+        public static void Talk(string message, Color color, bool console = true)
         {
             //check if the player is in singleplayer of multiplayer
             if (Main.netMode == NetmodeID.SinglePlayer)
@@ -444,6 +458,9 @@ namespace INSERT_NEW_NAMESPACE_HERE
                 //Brodcast a message to everyone in the server
                 ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(message), color);
             }
+
+            //output it to the console as well
+            if (console) Console.WriteLine(message);
         }
 
         //function that will convert human time to terraria ticks
@@ -478,30 +495,37 @@ namespace INSERT_NEW_NAMESPACE_HERE
 			return 0;
 		}
 
+        //function for checking if the given npc is a boss
+        public static bool IsNPCaBoss(NPC npc, bool includeBossParts = true)
+        {
+            //check if the npc is alive and is a boss
+            if (npc.active && npc.boss)
+            {
+                return true;
+            }
+            else
+            {
+                //loop through each part of the boss parts
+                foreach (int part in ffVar.Bosses.BossParts)
+                {
+                    //check if the npc is alive and is a part of a boss and its allowed to check
+                    if (npc.active && npc.type == part && includeBossParts)
+                    {
+                        return true;
+                    }
+                }
+            } 
+            return false;
+        }
+
         //function for checking if a boss is currently alive
         public static bool IsBossAlive()
         {
             //loop through each npc in the game
             foreach (NPC npc in Main.npc)
             {
-                //check if the npc is alive and is a boss
-                if (npc.active && npc.boss)
-                {
-                    return true;
-                }
-                else
-                {
-                    //loop through each part of the boss parts
-                    foreach (int part in ffVar.BossParts)
-                    {
-                        //check if the npc is alive and is a part of a boss
-                        if (npc.active && npc.type == part)
-                        {
-                            return true;
-                        }
-                    }
-                }
-
+                //return true if the given npc is a boss
+                if (IsNPCaBoss(npc)) return true;
             }
             return false;
         }
