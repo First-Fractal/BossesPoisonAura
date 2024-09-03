@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using BossesPoisonAura.Content;
+using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -26,8 +27,12 @@ namespace BossesPoisonAura
                         //check if the player is close enough to the boss
                         if (Vector2.Distance(player.Center, npc.Center) < radius)
                         {
-                            //give the player the buff
-                            player.AddBuff(BuffID.Poisoned, 1);
+                            //check what debuff to give the player
+                            int buff = BuffID.Poisoned;
+                            if (BPAConfig.Instance.customPoison) buff = ModContent.BuffType<Blue_Poison>();
+                            
+                            //give the player the debuff
+                            player.AddBuff(buff, 1);
                         }
                     }
                 }

@@ -15,7 +15,7 @@ namespace BossesPoisonAura
         //display the general options line 
         [Header("$Mods.BossesPoisonAura.Configs.GeneralOptions")]
 
-        //define the config value for boss minions giving debuffs
+        //define the config value for the particle count of the aura
         [DefaultValue(180)]
         [Slider()]
         [DrawTicks()]
@@ -23,10 +23,14 @@ namespace BossesPoisonAura
         [Range(0, 360)]
         public int BossAuraParticleCount;
 
-        //define the config value for boss minions giving debuffs
+        //define the config value for the boss aura intial radius
         [DefaultValue(20)]
         [Slider()]
         [Range(5, 60)]
         public int BossAuraInitalRadius;
+
+        //define the config value for using the custom poison
+        [DefaultValue(true)]
+        public bool customPoison;
     }
 }

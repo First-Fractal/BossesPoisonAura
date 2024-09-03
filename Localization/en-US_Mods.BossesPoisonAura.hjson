@@ -3,7 +3,7 @@ Configs: {
 		DisplayName: Boss Poison Aura Config
 
 		BossAuraParticleCount: {
-			Label: Boss Aura Particle Count
+			Label: Boss Aura Particle Count.
 			Tooltip:
 				'''
 				The amount of particles that is used for the boss aura. 
@@ -12,10 +12,22 @@ Configs: {
 		}
 
 		BossAuraInitalRadius: {
-			Label: Boss Aura Inital Radius
-			Tooltip: "The initial size of the aura."
+			Label: Boss Aura Inital Radius.
+			Tooltip: The initial size of the aura.
+		}
+
+		customPoison: {
+			Label: Custom Poison.
+			Tooltip: Should the mod use a custom poison to prevent the bezoar from being immune to it?
 		}
 	}
 
 	GeneralOptions: Boss Poison Aura General Options
+}
+
+Buffs: {
+	Blue_Poison: {
+		DisplayName: Blue Poison
+		Description: You aren't chessing this debuff with the bezoar.
+	}
 }
