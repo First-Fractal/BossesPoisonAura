@@ -8,9 +8,11 @@ namespace BossesPoisonAura
     internal class BPAGlobalNPC : GlobalNPC
     {
         //the radius of the poison aura is 30 blocks (16 pixels in one block)
-        public static int radius = 30 * 16;
+        public static int radius;
         public override void AI(NPC npc)
         {
+            radius = 20 * 16;
+
             //check if the current npc is a boss
             if (ffFunc.IsNPCaBoss(npc))
             {
@@ -39,7 +41,7 @@ namespace BossesPoisonAura
             if (ffFunc.IsNPCaBoss(npc))
             {
                 //define how much dust for the radius
-                int radiusDustAmount = 30;
+                int radiusDustAmount = 180;
 
                 //create the dusts needed
                 for (int i = 0; i < radiusDustAmount; i++)
@@ -52,7 +54,12 @@ namespace BossesPoisonAura
                     offset = offset.RotatedBy(MathHelper.ToRadians(rotateBy));
 
                     //create the dust
-                    Dust.NewDustPerfect(npc.position + offset, DustID.Grass);
+                    Dust radiusDust = Dust.NewDustPerfect(npc.Center + offset, 39, Vector2.Zero);
+
+                    //make it not have gravity and only use the first frame of it
+                    radiusDust.noGravity = true;
+                    radiusDust.firstFrame = true;
+
                 }
             }
             base.DrawEffects(npc, ref drawColor);
