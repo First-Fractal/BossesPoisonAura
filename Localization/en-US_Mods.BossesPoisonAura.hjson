@@ -1,1 +1,21 @@
+Configs: {
+	BPAConfig: {
+		DisplayName: Boss Poison Aura Config
 
+		BossAuraParticleCount: {
+			Label: Boss Aura Particle Count
+			Tooltip:
+				'''
+				The amount of particles that is used for the boss aura. 
+				Lower down this number to improve performance.
+				'''
+		}
+
+		BossAuraInitalRadius: {
+			Label: Boss Aura Inital Radius
+			Tooltip: "The initial size of the aura."
+		}
+	}
+
+	GeneralOptions: Boss Poison Aura General Options
+}

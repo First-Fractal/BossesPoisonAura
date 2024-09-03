@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -11,7 +12,7 @@ namespace BossesPoisonAura
         public static int radius;
         public override void AI(NPC npc)
         {
-            radius = 20 * 16;
+            radius = BPAConfig.Instance.BossAuraInitalRadius * 16;
 
             //check if the current npc is a boss
             if (ffFunc.IsNPCaBoss(npc))
@@ -41,7 +42,7 @@ namespace BossesPoisonAura
             if (ffFunc.IsNPCaBoss(npc))
             {
                 //define how much dust for the radius
-                int radiusDustAmount = 180;
+                int radiusDustAmount = BPAConfig.Instance.BossAuraParticleCount;
 
                 //create the dusts needed
                 for (int i = 0; i < radiusDustAmount; i++)
@@ -50,7 +51,7 @@ namespace BossesPoisonAura
                     Vector2 offset = new Vector2(radius, 0);
 
                     //rotate the offset
-                    int rotateBy = 360 / radiusDustAmount * i;
+                    int rotateBy = (int)(MathF.Round(360 / radiusDustAmount) * i);
                     offset = offset.RotatedBy(MathHelper.ToRadians(rotateBy));
 
                     //create the dust
