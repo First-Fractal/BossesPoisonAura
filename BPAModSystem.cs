@@ -3,7 +3,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using BossesPoisonAura.Content.Bezoars;
+using BossesPoisonAura.Content.Bezoars.firstTier;
+using BossesPoisonAura.Content.Bezoars.SecondTier;
 
 namespace BossesPoisonAura
 {
@@ -77,6 +78,18 @@ namespace BossesPoisonAura
             //add in a way to get a partial refund on the blue bezoar
             Recipe recipe = Recipe.Create(ItemID.Bezoar);
             recipe.AddIngredient(ModContent.ItemType<Blue_Bezoar>());
+            recipe.AddTile(TileID.WorkBenches);
+            recipe.Register();
+
+            //add in a way to get a partial refund on the crimtaine bezoar
+            recipe = Recipe.Create(ItemID.Bezoar);
+            recipe.AddIngredient(ModContent.ItemType<Crimtaine_Bezoar>());
+            recipe.AddTile(TileID.WorkBenches);
+            recipe.Register();
+
+            //add in a way to get a partial refund on the demonite bezoar
+            recipe = Recipe.Create(ItemID.Bezoar);
+            recipe.AddIngredient(ModContent.ItemType<Demonite_Bezoar>());
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
 

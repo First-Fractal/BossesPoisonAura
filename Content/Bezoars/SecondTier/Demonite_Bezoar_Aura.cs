@@ -4,14 +4,14 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Microsoft.Xna.Framework;
 
-namespace BossesPoisonAura.Content.Bezoars
+namespace BossesPoisonAura.Content.Bezoars.SecondTier
 {
-    internal class Blue_Bezoar_Aura : ModItem
+    internal class Demonite_Bezoar_Aura : ModItem
     {
         public override void SetStaticDefaults()
         {
             //set it to shimmer to the poison one
-            ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<Blue_Bezoar_Poison>();
+            ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<Demonite_Bezoar_Poison>();
             base.SetStaticDefaults();
         }
 
@@ -38,16 +38,16 @@ namespace BossesPoisonAura.Content.Bezoars
                 //set the item time to the use time
                 player.itemTime = Item.useTime;
                 //check if the first tier hasn't been upgraded yet
-                if (ModContent.GetInstance<BPAModSystem>().upgrades[0] == upgradeType.none)
+                if (ModContent.GetInstance<BPAModSystem>().upgrades[1] == upgradeType.none)
                 {
                     //set the first upgrade to be aura and display it in the chat
-                    ModContent.GetInstance<BPAModSystem>().upgrades[0] = upgradeType.aura;
+                    ModContent.GetInstance<BPAModSystem>().upgrades[1] = upgradeType.aura;
                     ffFunc.Talk(Language.GetTextValue("Mods.BossesPoisonAura.Chat.Aura"), new Color(50, 255, 130));
                 }
                 else
                 {
                     //tell the player that they already made the upgrade
-                    ffFunc.Talk(Language.GetTextValue("Mods.BossesPoisonAura.Chat.Used1"), new Color(50, 255, 130));
+                    ffFunc.Talk(Language.GetTextValue("Mods.BossesPoisonAura.Chat.Used2"), new Color(50, 255, 130));
                 }
             }
             return base.UseItem(player);
