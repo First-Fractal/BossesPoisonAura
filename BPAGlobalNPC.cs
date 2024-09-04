@@ -9,11 +9,22 @@ namespace BossesPoisonAura
 {
     internal class BPAGlobalNPC : GlobalNPC
     {
-        //the radius of the poison aura is 30 blocks (16 pixels in one block)
+        //define the radius
         public static int radius;
         public override void AI(NPC npc)
         {
+            //see how much radius upgrades there are
+            int radiusDecrease = 0;
+            foreach (int upgrade in ModContent.GetInstance<BPAModSystem>().upgrades)
+            {
+                if (upgrade == upgradeType.aura) radiusDecrease++;
+            }
+
+            //set the inital radius size from the config in blocks
             radius = BPAConfig.Instance.BossAuraInitalRadius * 16;
+            
+            //if there is any upgrades, then reduce the radius
+            if (radiusDecrease > 0) radius = (int)(radius * Math.Pow(0.66, radiusDecrease)); 
 
             //check if the current npc is a boss
             if (ffFunc.IsNPCaBoss(npc))

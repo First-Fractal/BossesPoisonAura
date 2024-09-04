@@ -31,3 +31,41 @@ Buffs: {
 		Description: You aren't chessing this debuff with the bezoar.
 	}
 }
+
+Chat: {
+	Poison: The boss's poison damage will now do less damage.
+	Aura: The boss's aura will now be smaller.
+	Used1: You already choose the upgrade for the first tier.
+	Used2: You already choose the upgrade for the second tier.
+	Used3: You already choose the upgrade for the third tier.
+	Used4: You already choose the upgrade for the fourth tier.
+}
+
+Items: {
+	Blue_Bezoar: {
+		DisplayName: Blue Bezoar
+		Tooltip:
+			'''
+			The Temu version of the Bezoar.
+			Probably belong in the shimmer.
+			'''
+	}
+
+	Blue_Bezoar_Poison: {
+		DisplayName: Blue Bezoar Poison
+		Tooltip:
+			'''
+			Use this item to permanently reduce boss's poison by 66%.
+			Note that this will consume the first tier of upgrades. 
+			'''
+	}
+
+	Blue_Bezoar_Aura: {
+		DisplayName: Blue Bezoar Aura
+		Tooltip:
+			'''
+			Use this item to permanently reduce boss's aura by 66%.
+			Note that this will consume the first tier of upgrades. 
+			'''
+	}
+}
