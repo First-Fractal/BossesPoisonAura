@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Microsoft.Xna.Framework;
 
-namespace BossesPoisonAura.Content.Bezoars.firstTier
+namespace BossesPoisonAura.Content.Bezoars.FirstTier
 {
     internal class Blue_Bezoar_Poison : ModItem
     {

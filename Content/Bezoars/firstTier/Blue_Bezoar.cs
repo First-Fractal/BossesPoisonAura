@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace BossesPoisonAura.Content.Bezoars.firstTier
+namespace BossesPoisonAura.Content.Bezoars.FirstTier
 {
     internal class Blue_Bezoar : ModItem
     {
@@ -31,7 +31,7 @@ namespace BossesPoisonAura.Content.Bezoars.firstTier
             base.UpdateAccessory(player, hideVisual);
         }
 
-        //make it craftable via bezoar + 20 glow mushrooms at a workbench
+        //make it craftable via bezoar + 20 glowing mushrooms at a workbench
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();

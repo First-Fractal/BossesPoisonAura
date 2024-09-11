@@ -37,10 +37,10 @@ namespace BossesPoisonAura.Content.Bezoars.FourthTier
             {
                 //set the item time to the use time
                 player.itemTime = Item.useTime;
-                //check if the first tier hasn't been upgraded yet
+                //check if the fourth tier hasn't been upgraded yet
                 if (ModContent.GetInstance<BPAModSystem>().upgrades[3] == upgradeType.none)
                 {
-                    //set the foruth upgrade to be poison and display it in the chat
+                    //set the fourth upgrade to be poison and display it in the chat
                     ModContent.GetInstance<BPAModSystem>().upgrades[3] = upgradeType.poison;
                     ffFunc.Talk(Language.GetTextValue("Mods.BossesPoisonAura.Chat.Poison"), new Color(50, 255, 130));
                 }

@@ -4,13 +4,13 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Microsoft.Xna.Framework;
 
-namespace BossesPoisonAura.Content.Bezoars.firstTier
+namespace BossesPoisonAura.Content.Bezoars.FirstTier
 {
     internal class Blue_Bezoar_Aura : ModItem
     {
         public override void SetStaticDefaults()
         {
-            //set it to shimmer to the poison one
+            //make it shimmer to the blue bezoar poison
             ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<Blue_Bezoar_Poison>();
             base.SetStaticDefaults();
         }

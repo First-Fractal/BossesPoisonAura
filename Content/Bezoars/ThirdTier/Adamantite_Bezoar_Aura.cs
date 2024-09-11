@@ -10,7 +10,7 @@ namespace BossesPoisonAura.Content.Bezoars.ThirdTier
     {
         public override void SetStaticDefaults()
         {
-            //set it to shimmer to the poison one
+            //make it shimmer to the adamantite bezoar poison
             ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<Adamantite_Bezoar_Poison>();
             base.SetStaticDefaults();
         }
@@ -37,10 +37,10 @@ namespace BossesPoisonAura.Content.Bezoars.ThirdTier
             {
                 //set the item time to the use time
                 player.itemTime = Item.useTime;
-                //check if the first tier hasn't been upgraded yet
+                //check if the third tier hasn't been upgraded yet
                 if (ModContent.GetInstance<BPAModSystem>().upgrades[2] == upgradeType.none)
                 {
-                    //set the first upgrade to be aura and display it in the chat
+                    //set the third upgrade to be aura and display it in the chat
                     ModContent.GetInstance<BPAModSystem>().upgrades[2] = upgradeType.aura;
                     ffFunc.Talk(Language.GetTextValue("Mods.BossesPoisonAura.Chat.Aura"), new Color(50, 255, 130));
                 }

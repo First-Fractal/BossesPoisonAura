@@ -10,7 +10,7 @@ namespace BossesPoisonAura.Content.Bezoars.FourthTier
     {
         public override void SetStaticDefaults()
         {
-            //set it to shimmer to the poison one
+            //make it shimmer to the ectoplasm bezoar poison
             ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<Ectoplasm_Bezoar_Poison>();
             base.SetStaticDefaults();
         }
@@ -37,10 +37,10 @@ namespace BossesPoisonAura.Content.Bezoars.FourthTier
             {
                 //set the item time to the use time
                 player.itemTime = Item.useTime;
-                //check if the first tier hasn't been upgraded yet
+                //check if the forth tier hasn't been upgraded yet
                 if (ModContent.GetInstance<BPAModSystem>().upgrades[3] == upgradeType.none)
                 {
-                    //set the foruth upgrade to be aura and display it in the chat
+                    //set the fourth upgrade to be aura and display it in the chat
                     ModContent.GetInstance<BPAModSystem>().upgrades[3] = upgradeType.aura;
                     ffFunc.Talk(Language.GetTextValue("Mods.BossesPoisonAura.Chat.Aura"), new Color(50, 255, 130));
                 }

@@ -9,7 +9,7 @@ namespace BossesPoisonAura.Content.Bezoars.SecondTier
     {
         public override void SetStaticDefaults()
         {
-            //make it shimmer to the blue bezoar poison
+            //make it shimmer to the demonite bezoar poison
             ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<Demonite_Bezoar_Poison>();
             base.SetStaticDefaults();
         }
@@ -31,12 +31,12 @@ namespace BossesPoisonAura.Content.Bezoars.SecondTier
             base.UpdateAccessory(player, hideVisual);
         }
 
-        //make it craftable via bezoar + 20 shadow scale at a workbench
+        //make it craftable via bezoar + 4 shadow scale at a workbench
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.Bezoar);
-            recipe.AddIngredient(ItemID.ShadowScale, 20);
+            recipe.AddIngredient(ItemID.ShadowScale, 4);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
             base.AddRecipes();

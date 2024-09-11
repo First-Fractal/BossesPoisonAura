@@ -9,7 +9,7 @@ namespace BossesPoisonAura.Content.Bezoars.FourthTier
     {
         public override void SetStaticDefaults()
         {
-            //make it shimmer to the blue bezoar poison
+            //make it shimmer to the ectoplasm bezoar poison
             ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<Ectoplasm_Bezoar_Poison>();
             base.SetStaticDefaults();
         }

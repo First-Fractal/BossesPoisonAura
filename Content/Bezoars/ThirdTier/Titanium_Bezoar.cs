@@ -9,7 +9,7 @@ namespace BossesPoisonAura.Content.Bezoars.ThirdTier
     {
         public override void SetStaticDefaults()
         {
-            //make it shimmer to the blue bezoar poison
+            //make it shimmer to the titanium bezoar aura
             ItemID.Sets.ShimmerTransformToItem[Type] = ModContent.ItemType<Titanium_Bezoar_Poison>();
             base.SetStaticDefaults();
         }
@@ -31,7 +31,7 @@ namespace BossesPoisonAura.Content.Bezoars.ThirdTier
             base.UpdateAccessory(player, hideVisual);
         }
 
-        //make it craftable via bezoar + 20 titanium ore at mythril anvil
+        //make it craftable via bezoar + 3 titanium ore at mythril anvil
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
