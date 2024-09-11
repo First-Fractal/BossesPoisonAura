@@ -20,6 +20,11 @@ Configs: {
 			Label: Custom Poison.
 			Tooltip: Should the mod use a custom poison to prevent the bezoar from being immune to it?
 		}
+
+		allowCounterItems: {
+			Label: allow Counter Items
+			Tooltip: "Should the players be allowed to use items that counteract the boss poison aura?"
+		}
 	}
 
 	GeneralOptions: Boss Poison Aura General Options

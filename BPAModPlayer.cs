@@ -32,7 +32,8 @@ namespace BossesPoisonAura
                 double poisonNerf = 0;
                 foreach(int upgrade in ModContent.GetInstance<BPAModSystem>().upgrades)
                 {
-                    if (upgrade == upgradeType.poison) poisonNerf++;
+                    //if the current upgrade tier is the poison one and counter items are allowed, then decrease the radius
+                    if (upgrade == upgradeType.poison && BPAConfig.Instance.allowCounterItems) poisonNerf++;
                 }
 
                 //make it override all of the player postive regen

@@ -32,5 +32,9 @@ namespace BossesPoisonAura
         //define the config value for using the custom poison
         [DefaultValue(true)]
         public bool customPoison;
+
+        //define the config value for using the counter items
+        [DefaultValue(true)]
+        public bool allowCounterItems;
     }
 }

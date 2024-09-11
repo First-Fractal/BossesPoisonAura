@@ -17,7 +17,8 @@ namespace BossesPoisonAura
             int radiusDecrease = 0;
             foreach (int upgrade in ModContent.GetInstance<BPAModSystem>().upgrades)
             {
-                if (upgrade == upgradeType.aura) radiusDecrease++;
+                //if the current upgrade tier is the aura one and counter items are allowed, then decrease the radius
+                if (upgrade == upgradeType.aura && BPAConfig.Instance.allowCounterItems) radiusDecrease++;
             }
 
             //set the inital radius size from the config in blocks
