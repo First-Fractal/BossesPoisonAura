@@ -3,9 +3,10 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using BossesPoisonAura.Content.Bezoars.firstTier;
+using BossesPoisonAura.Content.Bezoars.FirstTier;
 using BossesPoisonAura.Content.Bezoars.SecondTier;
 using BossesPoisonAura.Content.Bezoars.ThirdTier;
+using BossesPoisonAura.Content.Bezoars.FourthTier;
 
 namespace BossesPoisonAura
 {
@@ -103,6 +104,12 @@ namespace BossesPoisonAura
             //add in a way to get a partial refund on the titanium bezoar
             recipe = Recipe.Create(ItemID.Bezoar);
             recipe.AddIngredient(ModContent.ItemType<Titanium_Bezoar>());
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
+
+            //add in a way to get a partial refund on the titanium bezoar
+            recipe = Recipe.Create(ItemID.Bezoar);
+            recipe.AddIngredient(ModContent.ItemType<Ectoplasm_Bezoar>());
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
 

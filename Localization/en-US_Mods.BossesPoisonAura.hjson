@@ -46,7 +46,7 @@ Items: {
 		DisplayName: Blue Bezoar
 		Tooltip:
 			'''
-			The Wish version of the Bezoar.
+			The Wish.com version of the Bezoar.
 			Probably belong in the shimmer.
 			'''
 	}
@@ -73,7 +73,7 @@ Items: {
 		DisplayName: Crimtaine Bezoar
 		Tooltip:
 			'''
-			Is it still a Bezoar if it\'s covered in blood?.
+			Is it still a Bezoar if it's covered in blood?
 			Probably belong in the shimmer after the Blue Bezoar.
 			'''
 	}
@@ -100,7 +100,7 @@ Items: {
 		DisplayName: Demonite Bezoar
 		Tooltip:
 			'''
-			The Bezoar spent too long in the corruption.
+			This Bezoar has been corrupted by politics.
 			Probably belong in the shimmer after the Blue Bezoar.
 			'''
 	}
@@ -125,7 +125,7 @@ Items: {
 
 	Adamantite_Bezoar: {
 		DisplayName: Adamantite Bezoar
-		Tooltip: 
+		Tooltip:
 			'''
 			Probably a bad idea to digest a bezoar wrapped in hard ores.
 			Probably belong in the shimmer after the Evil Bezoar.
@@ -152,8 +152,9 @@ Items: {
 
 	Titanium_Bezoar: {
 		DisplayName: Titanium Bezoar
-		Tooltip: 
-			'''The only bezoar that is tighter then titanium.
+		Tooltip:
+			'''
+			The only bezoar that is tighter then titanium.
 			Probably belong in the shimmer after the Evil Bezoar.
 			'''
 	}
@@ -169,6 +170,33 @@ Items: {
 
 	Titanium_Bezoar_Poison: {
 		DisplayName: Titanium Bezoar Poison
+		Tooltip:
+			'''
+			Use this item to permanently reduce boss's poison by another 66%.
+			Note that this will consume the third tier of upgrades. 
+			'''
+	}
+
+	Ectoplasm_Bezoar: {
+		DisplayName: Ectoplasm Bezoar
+		Tooltip:
+			'''
+			I can still hear the screams of the dead childrens in here.
+			Probably belong in the shimmer after the Hardmode Bezoar.
+			'''
+	}
+
+	Ectoplasm_Bezoar_Aura: {
+		DisplayName: Ectoplasm Bezoar Aura
+		Tooltip:
+			'''
+			Use this item to permanently reduce boss's aura by another 66%.
+			Note that this will consume the third tier of upgrades. 
+			'''
+	}
+
+	Ectoplasm_Bezoar_Poison: {
+		DisplayName: Ectoplasm Bezoar Poison
 		Tooltip:
 			'''
 			Use this item to permanently reduce boss's poison by another 66%.
