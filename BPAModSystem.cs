@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using BossesPoisonAura.Content.Bezoars.firstTier;
 using BossesPoisonAura.Content.Bezoars.SecondTier;
+using BossesPoisonAura.Content.Bezoars.ThirdTier;
 
 namespace BossesPoisonAura
 {
@@ -91,6 +92,18 @@ namespace BossesPoisonAura
             recipe = Recipe.Create(ItemID.Bezoar);
             recipe.AddIngredient(ModContent.ItemType<Demonite_Bezoar>());
             recipe.AddTile(TileID.WorkBenches);
+            recipe.Register();
+
+            //add in a way to get a partial refund on the adamanite bezoar
+            recipe = Recipe.Create(ItemID.Bezoar);
+            recipe.AddIngredient(ModContent.ItemType<Adamantite_Bezoar>());
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
+
+            //add in a way to get a partial refund on the titanium bezoar
+            recipe = Recipe.Create(ItemID.Bezoar);
+            recipe.AddIngredient(ModContent.ItemType<Titanium_Bezoar>());
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
 
             base.AddRecipes();

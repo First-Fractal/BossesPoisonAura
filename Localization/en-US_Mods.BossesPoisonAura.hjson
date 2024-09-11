@@ -46,7 +46,7 @@ Items: {
 		DisplayName: Blue Bezoar
 		Tooltip:
 			'''
-			The Temu version of the Bezoar.
+			The Wish version of the Bezoar.
 			Probably belong in the shimmer.
 			'''
 	}
@@ -71,7 +71,7 @@ Items: {
 
 	Crimtaine_Bezoar: {
 		DisplayName: Crimtaine Bezoar
-		Tooltip: 
+		Tooltip:
 			'''
 			Is it still a Bezoar if it\'s covered in blood?.
 			Probably belong in the shimmer after the Blue Bezoar.
@@ -80,7 +80,7 @@ Items: {
 
 	Crimtaine_Bezoar_Aura: {
 		DisplayName: Crimtaine Bezoar Aura
-		Tooltip: 
+		Tooltip:
 			'''
 			Use this item to permanently reduce boss's aura by another 66%.
 			Note that this will consume the second tier of upgrades. 
@@ -89,7 +89,7 @@ Items: {
 
 	Crimtaine_Bezoar_Poison: {
 		DisplayName: Crimtaine Bezoar Poison
-		Tooltip: 
+		Tooltip:
 			'''
 			Use this item to permanently reduce boss's poison by another 66%.
 			Note that this will consume the second tier of upgrades. 
@@ -98,7 +98,7 @@ Items: {
 
 	Demonite_Bezoar: {
 		DisplayName: Demonite Bezoar
-		Tooltip: 
+		Tooltip:
 			'''
 			The Bezoar spent too long in the corruption.
 			Probably belong in the shimmer after the Blue Bezoar.
@@ -107,7 +107,7 @@ Items: {
 
 	Demonite_Bezoar_Aura: {
 		DisplayName: Demonite Bezoar Aura
-		Tooltip: 
+		Tooltip:
 			'''
 			Use this item to permanently reduce boss's aura by another 66%.
 			Note that this will consume the second tier of upgrades. 
@@ -116,10 +116,63 @@ Items: {
 
 	Demonite_Bezoar_Poison: {
 		DisplayName: Demonite Bezoar Poison
-		Tooltip: 
+		Tooltip:
 			'''
 			Use this item to permanently reduce boss's poison by another 66%.
 			Note that this will consume the second tier of upgrades. 
+			'''
+	}
+
+	Adamantite_Bezoar: {
+		DisplayName: Adamantite Bezoar
+		Tooltip: 
+			'''
+			Probably a bad idea to digest a bezoar wrapped in hard ores.
+			Probably belong in the shimmer after the Evil Bezoar.
+			'''
+	}
+
+	Adamantite_Bezoar_Aura: {
+		DisplayName: Adamantite Bezoar Aura
+		Tooltip:
+			'''
+			Use this item to permanently reduce boss's aura by another 66%.
+			Note that this will consume the third tier of upgrades. 
+			'''
+	}
+
+	Adamantite_Bezoar_Poison: {
+		DisplayName: Adamantite Bezoar Poison
+		Tooltip:
+			'''
+			Use this item to permanently reduce boss's poison by another 66%.
+			Note that this will consume the third tier of upgrades. 
+			'''
+	}
+
+	Titanium_Bezoar: {
+		DisplayName: Titanium Bezoar
+		Tooltip: 
+			'''The only bezoar that is tighter then titanium.
+			Probably belong in the shimmer after the Evil Bezoar.
+			'''
+	}
+
+	Titanium_Bezoar_Aura: {
+		DisplayName: Titanium Bezoar Aura
+		Tooltip:
+			'''
+			Use this item to permanently reduce boss's aura by another 66%.
+			Note that this will consume the third tier of upgrades. 
+			'''
+	}
+
+	Titanium_Bezoar_Poison: {
+		DisplayName: Titanium Bezoar Poison
+		Tooltip:
+			'''
+			Use this item to permanently reduce boss's poison by another 66%.
+			Note that this will consume the third tier of upgrades. 
 			'''
 	}
 }
