@@ -1,1 +1,16 @@
-Modify this file with a description of your mod.
+The Boss Poison Aura mod adds a poison aura to every boss. If you're inside this aura, you'll be poisoned. Stepping just outside the aura will remove the poison. You can adjust the aura's radius and decide if the boss's other parts should also have the aura. The mod includes a modified poison debuff that isn't affected by the bezoar (though this feature can be turned off in the settings).
+
+There are four tiers of items to help counteract the aura and poison:
+
+    Tier 1: Combine a bezoar with 20 glowing mushrooms at a workbench.
+    Tier 2: Combine a bezoar with 4 tissue samples or shadow scales at a workbench.
+    Tier 3: Combine a bezoar with 3 adamantite or titanium ores at a mythril anvil.
+    Tier 4: Combine a bezoar with 2 ectoplasm at a mythril anvil.
+
+To upgrade:
+
+    Throwing a tier bezoar into the shimmer creates an item that reduces poison damage by 66%.
+    Throwing a poison bezoar into the shimmer creates an item that reduces the aura radius by 66%.
+    Throwing an aura item into the shimmer creates a poHEison item.
+
+Note: Using an upgrade will lock you out of the other upgrade options in that tier. For example, using the Tier 1 aura item will prevent you from using the Tier 1 poison item, but you can still use items from other tiers.

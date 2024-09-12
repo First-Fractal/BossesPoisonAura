@@ -32,7 +32,7 @@ namespace BossesPoisonAura
         public bool noWormParts;
 
         //define the config value for the boss aura intial radius
-        [DefaultValue(20)]
+        [DefaultValue(30)]
         [Slider()]
         [Range(5, 60)]
         public int BossAuraInitalRadius;

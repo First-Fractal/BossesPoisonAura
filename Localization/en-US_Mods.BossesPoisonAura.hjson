@@ -28,7 +28,7 @@ Configs: {
 
 		includeBossParts: {
 			Label: Include Boss Parts
-			Tooltip: 
+			Tooltip:
 				'''
 				Should the boss aura include the other boss parts?
 				Example inludes: Skeletron Hands, Wall of Flesh Eyes, Plantera Hooks, Moon Lord Eyes, etc
@@ -37,7 +37,7 @@ Configs: {
 
 		noWormParts: {
 			Label: No Worm Parts
-			Tooltip: 
+			Tooltip:
 				'''
 				Should the boss aura include the worm's bodies?
 				NOTE: turning this on will most likely to cause lag due to the amount of particles on screen.
