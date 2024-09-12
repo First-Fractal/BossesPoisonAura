@@ -3,7 +3,7 @@ Configs: {
 		DisplayName: Boss Poison Aura Config
 
 		BossAuraParticleCount: {
-			Label: Boss Aura Particle Count.
+			Label: Boss Aura Particle Count
 			Tooltip:
 				'''
 				The amount of particles that is used for the boss aura. 
@@ -12,18 +12,39 @@ Configs: {
 		}
 
 		BossAuraInitalRadius: {
-			Label: Boss Aura Inital Radius.
+			Label: Boss Aura Inital Radius
 			Tooltip: The initial size of the aura.
 		}
 
 		customPoison: {
-			Label: Custom Poison.
+			Label: Custom Poison
 			Tooltip: Should the mod use a custom poison to prevent the bezoar from being immune to it?
 		}
 
 		allowCounterItems: {
-			Label: allow Counter Items
-			Tooltip: "Should the players be allowed to use items that counteract the boss poison aura?"
+			Label: Allow Counter Items
+			Tooltip: Should the players be allowed to use items that counteract the boss poison aura?
+		}
+
+		includeBossParts: {
+			Label: Include Boss Parts
+			Tooltip: 
+				'''
+				Should the boss aura include the other boss parts?
+				Example inludes: Skeletron Hands, Wall of Flesh Eyes, Plantera Hooks, Moon Lord Eyes, etc
+				'''
+		}
+
+		noWormParts: {
+			Label: No Worm Parts
+			Tooltip: 
+				'''
+				Should the boss aura include the worm's bodies?
+				NOTE: turning this on will most likely to cause lag due to the amount of particles on screen.
+				Not only that, but not all particle will be render due to hitting the game's' particle limit.
+				Lowering down the aura particle count will improve performance. 
+				Enable at your own risk. 
+				'''
 		}
 	}
 

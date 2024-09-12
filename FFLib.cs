@@ -496,8 +496,10 @@ namespace BossesPoisonAura
 		}
 
         //function for checking if the given npc is a boss
-        public static bool IsNPCaBoss(NPC npc, bool includeBossParts = true)
+        public static bool IsNPCaBoss(NPC npc, bool includeBossParts = true, bool noWormBody = false)
         {
+            int[] wormBodies = { NPCID.EaterofWorldsBody, NPCID.EaterofWorldsTail, NPCID.TheDestroyerBody, NPCID.TheDestroyerTail };
+
             //check if the npc is alive and is a boss
             if (npc.active && npc.boss)
             {
@@ -511,6 +513,8 @@ namespace BossesPoisonAura
                     //check if the npc is alive and is a part of a boss and its allowed to check
                     if (npc.active && npc.type == part && includeBossParts)
                     {
+                        //check if worms bodies shouldnt be included
+                        if (noWormBody && wormBodies.Contains(npc.type)) return false;
                         return true;
                     }
                 }

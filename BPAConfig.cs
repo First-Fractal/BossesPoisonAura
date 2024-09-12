@@ -20,8 +20,16 @@ namespace BossesPoisonAura
         [Slider()]
         [DrawTicks()]
         [Increment(30)]
-        [Range(0, 360)]
+        [Range(15, 360)]
         public int BossAuraParticleCount;
+
+        //define the config value for including the boss parts (EX: moon lord eyes) 
+        [DefaultValue(true)]
+        public bool includeBossParts;
+
+        //define the config value for not including the worm body and tail 
+        [DefaultValue(true)]
+        public bool noWormParts;
 
         //define the config value for the boss aura intial radius
         [DefaultValue(20)]

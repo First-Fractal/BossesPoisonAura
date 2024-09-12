@@ -28,7 +28,7 @@ namespace BossesPoisonAura
             if (radiusDecrease > 0) radius = (int)(radius * Math.Pow(0.66, radiusDecrease)); 
 
             //check if the current npc is a boss
-            if (ffFunc.IsNPCaBoss(npc))
+            if (ffFunc.IsNPCaBoss(npc, BPAConfig.Instance.includeBossParts, BPAConfig.Instance.noWormParts))
             {
                 //loop through all players in the game
                 foreach (Player player in Main.player)
@@ -56,7 +56,7 @@ namespace BossesPoisonAura
         public override void DrawEffects(NPC npc, ref Color drawColor)
         {
             //check if the npc is a boss
-            if (ffFunc.IsNPCaBoss(npc))
+            if (ffFunc.IsNPCaBoss(npc, BPAConfig.Instance.includeBossParts, BPAConfig.Instance.noWormParts))
             {
                 //define how much dust for the radius
                 int radiusDustAmount = BPAConfig.Instance.BossAuraParticleCount;
