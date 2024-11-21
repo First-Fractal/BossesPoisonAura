@@ -1,4 +1,4 @@
-The Boss Poison Aura mod adds a poison aura to every boss. If you're inside this aura, you'll be poisoned. Stepping just outside the aura will remove the poison. You can adjust the aura's radius and decide if the boss's other parts should also have the aura. The mod includes a modified poison debuff that isn't affected by the bezoar (though this feature can be turned off in the settings).
+The Boss Poison Aura mod is a mod that adds a poison aura to every boss. If you're inside this aura, you'll be poisoned. Stepping just outside the aura will remove the poison. You can adjust the aura's radius and decide if the boss's other parts should also have the aura. The mod includes a modified poison debuff that isn't affected by the bezoar (though this feature can be turned off in the settings).
 
 There are four tiers of items to help counteract the aura and poison:
 
@@ -14,3 +14,5 @@ To upgrade:
     Throwing an aura item into the shimmer creates a poHEison item.
 
 Note: Using an upgrade will lock you out of the other upgrade options in that tier. For example, using the Tier 1 aura item will prevent you from using the Tier 1 poison item, but you can still use items from other tiers.
+
+You can also use the /bpa command to check on the status of the upgrades.

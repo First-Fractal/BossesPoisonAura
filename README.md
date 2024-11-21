@@ -1,15 +1,25 @@
-# Boss Adrenaline Mode
-Boss Adrenaline Mode is a simple mod that makes bosses move fast every couple of seconds. 
-Everything about this mod that you need to tweak is configurable.
+# The Boss Poison Aura Mod
+The Boss Poison Aura mod is a mod that adds a poison aura to every boss. If you're inside this aura, you'll be poisoned. Stepping just outside the aura will remove the poison. You can adjust the aura's radius and decide if the boss's other parts should also have the aura. The mod includes a modified poison debuff that isn't affected by the bezoar (though this feature can be turned off in the settings).
 
-# Credit
-If you are a Terraria Content Creator that is going to use this mod, please give me proper credit by mention that I was the one who made it, and that you link my channel (https://www.youtube.com/@first_fractal), mod, or website (https://firstfractal.com) in the description.
+There are four tiers of items to help counteract the aura and poison:
+
+    Tier 1: Combine a bezoar with 20 glowing mushrooms at a workbench.
+    Tier 2: Combine a bezoar with 4 tissue samples or shadow scales at a workbench.
+    Tier 3: Combine a bezoar with 3 adamantite or titanium ores at a mythril anvil.
+    Tier 4: Combine a bezoar with 2 ectoplasm at a mythril anvil.
+
+To upgrade:
+
+    Throwing a tier bezoar into the shimmer creates an item that reduces poison damage by 66%.
+    Throwing a poison bezoar into the shimmer creates an item that reduces the aura radius by 66%.
+    Throwing an aura item into the shimmer creates a poHEison item.
+
+Note: Using an upgrade will lock you out of the other upgrade options in that tier. For example, using the Tier 1 aura item will prevent you from using the Tier 1 poison item, but you can still use items from other tiers.
+
+You can also use the /bpa command to check on the status of the upgrades.
 
 # Steam Workshop
 [Download it here](https://steamcommunity.com/sharedfiles/filedetails/?id=2952321754)
 
 # Change Log
-v.1.3: added a "duct tape" method of forcing Empress of Light to not despawn, and a fix some spelling mistakes that I missed cause I'm blind.
-v 1.2: Removed an npc that was falsely labed as a boss part. 
-v 1.1: Fixed a bug where the boss parts were not affected by adrenaline. 
 v 1.0: Relased the mod.
