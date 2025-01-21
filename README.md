@@ -14,12 +14,13 @@ To upgrade:
     Throwing a poison bezoar into the shimmer creates an item that reduces the aura radius by 66%.
     Throwing an aura item into the shimmer creates a poHEison item.
 
-Note: Using an upgrade will lock you out of the other upgrade options in that tier. For example, using the Tier 1 aura item will prevent you from using the Tier 1 poison item, but you can still use items from other tiers.
+Note: Using an upgrade will lock you out of the other upgrade options in that tier. 
+For example, using the Tier 1 aura item will prevent you from using the Tier 1 poison item, but you can still use the items from other tiers.
 
 You can also use the /bpa command to check on the status of the upgrades.
 
 # Steam Workshop
-[Download it here](https://steamcommunity.com/sharedfiles/filedetails/?id=2952321754)
+[Download it here](https://steamcommunity.com/sharedfiles/filedetails/?id=3412085806)
 
 # Change Log
 v 1.0: Relased the mod.

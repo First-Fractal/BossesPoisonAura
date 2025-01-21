@@ -24,12 +24,6 @@ namespace BossesPoisonAura
         //create the upgrades list
         public int[] upgrades = [upgradeType.none, upgradeType.none, upgradeType.none, upgradeType.none];
 
-        public override void PostUpdateEverything()
-        {
-            //ffFunc.Talk(String.Join(", ", upgrades), Microsoft.Xna.Framework.Color.Orange);
-            base.PostUpdateEverything();
-        }
-
         //save the upgrades to the world
         public override void SaveWorldData(TagCompound tag)
         {
